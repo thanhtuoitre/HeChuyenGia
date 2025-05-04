@@ -114,7 +114,7 @@ public class FormTuVanController implements Initializable {
 	}
 
 	private Connection getConnection() throws SQLException {
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=LuatSuyDien;encrypt=true;trustServerCertificate=true;";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=LuatSuyDien;encrypt=true;trustServerCertificate=true";
 		String user = "sa"; // sửa lại nếu cần
 		String password = "1"; // thay bằng mật khẩu thật
 		return DriverManager.getConnection(url, user, password);
