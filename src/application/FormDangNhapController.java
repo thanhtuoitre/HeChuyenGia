@@ -40,6 +40,9 @@ public class FormDangNhapController {
 	private Hyperlink linkChuyenManChinh;
 
 	@FXML
+	private Hyperlink linkChuyenDangKy;
+	
+	@FXML
 	private Button btnDangNhap;
 
 	@FXML
@@ -97,8 +100,25 @@ public class FormDangNhapController {
 	// Phương thức xử lý đăng ký
 	@FXML
 	private void dangKy() {
-		// Chuyển sang màn hình đăng ký (ví dụ)
-		System.out.println("Chuyển đến màn hình đăng ký");
+	    try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("FormDangKy.fxml"));
+	        Scene scene = new Scene(loader.load());
+
+	        // Tạo Stage mới cho Form Đăng ký
+	        Stage stage = new Stage();
+	        stage.setTitle("Đăng ký tài khoản");
+	        stage.setScene(scene);
+	        stage.show(); // Mở cửa sổ đăng ký
+	        Stage currentStage = (Stage) btnDangKy.getScene().getWindow();
+	        currentStage.close();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        Alert alert = new Alert(Alert.AlertType.ERROR);
+	        alert.setTitle("Lỗi");
+	        alert.setHeaderText("Không thể mở cửa sổ Đăng ký");
+	        alert.setContentText("Đã xảy ra lỗi khi mở FormDangKy.");
+	        alert.showAndWait();
+	    }
 	}
 
 	// Phương thức xử lý chuyển đến màn hình chính

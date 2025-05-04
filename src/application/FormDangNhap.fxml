@@ -70,6 +70,7 @@
                 <Label fx:id="lblLoi" text="Lỗi" textFill="#d32424" visible="false" />
                 <Hyperlink fx:id="linkChuyenManChinh" text="Chuyển tới màn hình chính"
                            onAction="#chuyenManChinh" visible="false" />
+                           
             </children>
         </HBox>
         <HBox prefHeight="100.0" prefWidth="200.0"

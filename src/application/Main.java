@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Tải FXML của FormDangKy (hoặc FormDangNhap)
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FormDangKy.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FormDangNhap.fxml"));
             GridPane root = loader.load();  
 
             // Tạo Scene và thiết lập cho Stage
