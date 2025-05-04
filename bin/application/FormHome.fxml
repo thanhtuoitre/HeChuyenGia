@@ -14,11 +14,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FormHomeController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="94.0" prefWidth="749.0" spacing="85.0" style="-fx-background-color: beige;">
          <children>
-            <Button mnemonicParsing="false" text="Tư Vấn">
+            <Button fx:id="btnTuVan" mnemonicParsing="false" text="Tư Vấn" onAction="#moTuVan">
                <font>
                   <Font name="System Bold Italic" size="17.0" />
                </font>
@@ -26,15 +26,7 @@
                   <Insets left="40.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Sự Kiện">
-               <font>
-                  <Font name="System Bold Italic" size="17.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </Button>
-            <Button layoutX="90.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="Luật">
+            <Button fx:id="btnLuat" layoutX="90.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="Luật" onAction="#moLuat">
                <font>
                   <Font name="System Bold Italic" size="17.0" />
                </font>
@@ -58,7 +50,7 @@
             <HBox alignment="CENTER_RIGHT" spacing="20.0" GridPane.columnIndex="1">
                <children>
                   <Label text="Xin chào bạn" />
-                  <Hyperlink text="Đăng Xuất">
+                  <Hyperlink fx:id="linkDangXuat" text="Đăng Xuất" onAction="#dangXuat">
                      <padding>
                         <Insets right="20.0" />
                      </padding>

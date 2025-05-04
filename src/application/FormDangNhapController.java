@@ -123,7 +123,7 @@ public class FormDangNhapController {
 
 	// Phương thức xử lý chuyển đến màn hình chính
 	@FXML
-	private void chuyenManChinh() {
+	public void chuyenManChinh() {
 		try {
 			// Tải FXML của FormHome
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("FormHome.fxml"));
